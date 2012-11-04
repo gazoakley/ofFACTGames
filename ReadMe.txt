@@ -1,1 +1,0 @@
-This repository contains a simple Snake game that demonstrates OpenFrameworks in conjunction with the fascade at the front of FACT in Liverpool - see the fact-liverpool repositories on GitHub for more details
