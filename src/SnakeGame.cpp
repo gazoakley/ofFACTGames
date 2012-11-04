@@ -22,18 +22,18 @@ void SnakeGame::setup(){
 	ofSetFrameRate(5);
     
     // Setup controller
-	ofxGamepadHandler::get()->enableHotplug();
-    
-    //CHECK IF THERE EVEN IS A GAMEPAD CONNECTED
-    if(ofxGamepadHandler::get()->getNumPads()>0)
-    {
-        cout << "Gamepad enabled!" << endl;
-        ofxGamepad* pad = ofxGamepadHandler::get()->getGamepad(2);
-        cout << "Using: " << pad->name << endl;
-        ofAddListener(pad->onAxisChanged, this, &SnakeGame::axisChanged);
-        ofAddListener(pad->onButtonPressed, this, &SnakeGame::buttonPressed);
-        ofAddListener(pad->onButtonReleased, this, &SnakeGame::buttonReleased);
-    }
+	//ofxGamepadHandler::get()->enableHotplug();
+ //   
+ //   //CHECK IF THERE EVEN IS A GAMEPAD CONNECTED
+ //   if(ofxGamepadHandler::get()->getNumPads()>0)
+ //   {
+ //       cout << "Gamepad enabled!" << endl;
+ //       ofxGamepad* pad = ofxGamepadHandler::get()->getGamepad(2);
+ //       cout << "Using: " << pad->name << endl;
+ //       ofAddListener(pad->onAxisChanged, this, &SnakeGame::axisChanged);
+ //       ofAddListener(pad->onButtonPressed, this, &SnakeGame::buttonPressed);
+ //       ofAddListener(pad->onButtonReleased, this, &SnakeGame::buttonReleased);
+ //   }
     
     // Start game
     startGame();
@@ -163,44 +163,44 @@ void SnakeGame::keyPressed(int key){
 	}
 }
 
-void SnakeGame::axisChanged(ofxGamepadAxisEvent& e)
-{
-    cout << "AXIS " << e.axis << " VALUE " << ofToString(e.value) << endl;
-}
-
-void SnakeGame::buttonPressed(ofxGamepadButtonEvent& e)
-{
-    cout << "BUTTON " << e.button << " PRESSED" << endl;
-}
-
-void SnakeGame::buttonReleased(ofxGamepadButtonEvent& e)
-{
-    if (!isPlaying)
-    {
-        startGame();
-        return;
-    }
-    switch (e.button)
-    {
-        case 0:
-            cout << "1:Up";
-            snake1.setDirection(0, -1);
-            break;
-        case 1:
-            cout << "1: Down";
-            snake1.setDirection(0, 1);
-            break;
-        case 2:
-            cout << "1: Left";
-            snake1.setDirection(-1, 0);
-            break;
-        case 3:
-            cout << "1: Right";
-            snake1.setDirection(1, 0);
-            break;
-    }
-    cout << "BUTTON " << e.button << " RELEASED" << endl;
-}
+//void SnakeGame::axisChanged(ofxGamepadAxisEvent& e)
+//{
+//    cout << "AXIS " << e.axis << " VALUE " << ofToString(e.value) << endl;
+//}
+//
+//void SnakeGame::buttonPressed(ofxGamepadButtonEvent& e)
+//{
+//    cout << "BUTTON " << e.button << " PRESSED" << endl;
+//}
+//
+//void SnakeGame::buttonReleased(ofxGamepadButtonEvent& e)
+//{
+//    if (!isPlaying)
+//    {
+//        startGame();
+//        return;
+//    }
+//    switch (e.button)
+//    {
+//        case 0:
+//            cout << "1:Up";
+//            snake1.setDirection(0, -1);
+//            break;
+//        case 1:
+//            cout << "1: Down";
+//            snake1.setDirection(0, 1);
+//            break;
+//        case 2:
+//            cout << "1: Left";
+//            snake1.setDirection(-1, 0);
+//            break;
+//        case 3:
+//            cout << "1: Right";
+//            snake1.setDirection(1, 0);
+//            break;
+//    }
+//    cout << "BUTTON " << e.button << " RELEASED" << endl;
+//}
 
 //--------------------------------------------------------------
 void SnakeGame::keyReleased(int key){

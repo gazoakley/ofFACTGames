@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 #include "ofTrueTypeFont.h"
-#include "ofxGamepadHandler.h"
+//#include "ofxGamepadHandler.h"
 
 #include "TitleScreen.h"
 #include "Snake.h"
@@ -27,9 +27,9 @@ class SnakeGame : public TitleScreen
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-        void axisChanged(ofxGamepadAxisEvent &e);
-        void buttonPressed(ofxGamepadButtonEvent &e);
-        void buttonReleased(ofxGamepadButtonEvent &e);
+        //void axisChanged(ofxGamepadAxisEvent &e);
+        //void buttonPressed(ofxGamepadButtonEvent &e);
+        //void buttonReleased(ofxGamepadButtonEvent &e);
 
 	private:
 		ofTrueTypeFont verdana14;
